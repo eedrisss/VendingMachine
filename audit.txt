@@ -1,0 +1,7 @@
+2018-02-11T19:37:52.192 : VendingInsufficientFundsException | Product: Product: Black Tea
+2018-02-11T19:39:12.171 : VendingInsufficientFundsException | Product: Wriggling Caterpillar
+2018-02-11T19:40:43.343 : VendingNoItemInventoryException | Product: Wilted Lettuce
+2018-02-11T20:29:42.544 : VendingInsufficientFundsException | Product: Rice
+2018-02-11T20:30:36.844 : VendingInsufficientFundsException | Product: Purified Water
+2018-02-11T20:32:11.882 : VendingNoItemInventoryException | Product: Hair
+2018-02-11T20:32:28.728 : VendingNoItemInventoryException | Product: Dryer Lint

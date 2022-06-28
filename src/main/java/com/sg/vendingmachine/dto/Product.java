@@ -10,24 +10,20 @@ import java.util.Objects;
 
 /**
  *
- * @author Eddie
+ * @author Isaac Shadare
  */
 public class Product {
-    
+
     private String productName;
     private BigDecimal productPrice;
-    private int productInventoryCount;
-    
-    public Product(String itemName){
-        this.productName = itemName;
+    private int productQuantity;
+
+    public Product(String productName) {
+        this.productName = productName;
     }
 
     public String getProductName() {
         return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
     }
 
     public BigDecimal getProductPrice() {
@@ -38,20 +34,29 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public int getProductInventoryCount() {
-        return productInventoryCount;
+    public int getProductQuantity() {
+        return productQuantity;
     }
 
-    public void setProductInventoryCount(int productInventoryCount) {
-        this.productInventoryCount = productInventoryCount;
+    public void setProductQuantity(int productQuantity) {
+        this.productQuantity = productQuantity;
+    }
+
+    public void decrementProductQuantity() {
+        this.productQuantity = this.productQuantity - 1;
+    }
+
+    @Override
+    public String toString() {
+        return "Product: " + productName;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 71 * hash + Objects.hashCode(this.productName);
-        hash = 71 * hash + Objects.hashCode(this.productPrice);
-        hash = 71 * hash + this.productInventoryCount;
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.productName);
+        hash = 67 * hash + Objects.hashCode(this.productPrice);
+        hash = 67 * hash + this.productQuantity;
         return hash;
     }
 
@@ -67,7 +72,7 @@ public class Product {
             return false;
         }
         final Product other = (Product) obj;
-        if (this.productInventoryCount != other.productInventoryCount) {
+        if (this.productQuantity != other.productQuantity) {
             return false;
         }
         if (!Objects.equals(this.productName, other.productName)) {
@@ -77,5 +82,6 @@ public class Product {
             return false;
         }
         return true;
-    }  
+    }
+
 }

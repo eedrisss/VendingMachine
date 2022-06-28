@@ -1,0 +1,6 @@
+Water::4.00::0
+Wilted Lettuce::0.50::11
+Nylons::1.25::2
+product2::0.02::2
+product1::0.01::1
+testProduct::1.00::1
