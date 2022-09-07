@@ -9,33 +9,92 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author Isaac Shadare
+ * @author Eddie
  */
 public class Change {
 
-    private final String[] coins = {
-        "quarters", "dimes", "nickels", "pennies"
-    };
-    private int coinQuantities[] = new int[4];
+   public enum d {
+        PENNY  (new BigDecimal("0.01")),
+        NICKEL (new BigDecimal("0.05")),
+        DIME   (new BigDecimal("0.10")),
+        Quarter(new BigDecimal("0.25")),
+        Dollar (new BigDecimal("1.00"));
 
-    public Change(BigDecimal totalMoney) {
-        BigDecimal quarters[] = totalMoney.divideAndRemainder(Money.QUARTER.getCurrencyValue());
-        this.coinQuantities[0] = quarters[0].intValue();
+        private final BigDecimal val;
 
-        BigDecimal dimes[] = quarters[1].divideAndRemainder(Money.DIME.getCurrencyValue());
-        this.coinQuantities[1] = dimes[0].intValue();
+         d(BigDecimal v) {
+            this.val = v;
 
-        BigDecimal nickels[] = dimes[1].divideAndRemainder(Money.NICKEL.getCurrencyValue());
-        this.coinQuantities[2] = nickels[0].intValue();
+        }
 
-        this.coinQuantities[3] = nickels[1].divide(Money.PENNY.getCurrencyValue()).intValue();
+        public BigDecimal getVal() {
+            return val;
+        }
+    }
+   
+   // variables for use in change calculations
+    private BigDecimal deposit=  new BigDecimal("0");
+    private BigDecimal price = new BigDecimal("0");
+    private BigDecimal quartersGiven = new BigDecimal("0");
+    private BigDecimal dimesGiven = new BigDecimal("0");
+    private BigDecimal nickelsGiven = new BigDecimal("0");
+    private BigDecimal penniesGiven = new BigDecimal("0");
+    
+    
+    
+
+    //Getters and Setters
+    public BigDecimal getDeposit() {
+        return deposit;
     }
 
-    public String[] getCoins() {
-        return this.coins;
+    public void setDeposit(BigDecimal deposit) {
+        this.deposit = deposit;
     }
 
-    public int[] getCoinQuantities() {
-        return this.coinQuantities;
+    public BigDecimal getPrice() {
+        return price;
     }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public BigDecimal getQuartersGiven() {
+        return quartersGiven;
+    }
+
+    public void setQuartersGiven(BigDecimal quartersGiven) {
+        this.quartersGiven = quartersGiven;
+    }
+
+    public BigDecimal getDimesGiven() {
+        return dimesGiven;
+    }
+
+    public void setDimesGiven(BigDecimal dimesGiven) {
+        this.dimesGiven = dimesGiven;
+    }
+
+    public BigDecimal getNickelsGiven() {
+        return nickelsGiven;
+    }
+
+    public void setNickelsGiven(BigDecimal nickelsGiven) {
+        this.nickelsGiven = nickelsGiven;
+    }
+
+    public BigDecimal getPenniesGiven() {
+        return penniesGiven;
+    }
+
+    public void setPenniesGiven(BigDecimal penniesGiven) {
+        this.penniesGiven = penniesGiven;
+    }
+    
+    
+    
+    
+    
+
 }

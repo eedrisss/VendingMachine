@@ -5,3 +5,5 @@
 2018-02-11T20:30:36.844 : VendingInsufficientFundsException | Product: Purified Water
 2018-02-11T20:32:11.882 : VendingNoItemInventoryException | Product: Hair
 2018-02-11T20:32:28.728 : VendingNoItemInventoryException | Product: Dryer Lint
+2022-06-29T19:04:16.208071400 : VendingInsufficientFundsException | Product: Pencils
+2022-06-30T17:23:07.244418700 : VendingInsufficientFundsException | Product: Purified Water

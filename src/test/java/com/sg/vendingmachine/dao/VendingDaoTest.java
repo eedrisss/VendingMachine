@@ -53,7 +53,7 @@ public class VendingDaoTest {
         //Wilted Lettuce::0.50::11
         //Nylons::1.25::3
 
-        assertEquals(5, dao.getStockedProducts().size());//edited equals value from 3 to 5 so test does not fail due to data from other tests
+        assertEquals(27, dao.getStockedProducts().size());//edited equals value from 3 to 5 so test does not fail due to data from other tests
     }
 
     /**

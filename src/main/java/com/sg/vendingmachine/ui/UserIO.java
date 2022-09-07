@@ -7,31 +7,29 @@ package com.sg.vendingmachine.ui;
 
 /**
  *
- * @author Isaac Shadare
+ * @author Eddie
  */
 public interface UserIO {
+    
+    void print(String message);
 
-    public void print(String message);
+    double readDouble(String prompt);
 
-    public void printLine(String message);
+    double readDouble(String prompt, double min, double max);
 
-    public double readDouble(String prompt, boolean nextLine);
+    float readFloat(String prompt);
 
-    public double readDouble(String prompt, double min, double max, boolean nextLine);
+    float readFloat(String prompt, float min, float max);
 
-    public float readFloat(String prompt, boolean nextLine);
+    int readInt(String prompt);
 
-    public float readFloat(String prompt, float min, float max, boolean nextLine);
+    int readInt(String prompt, int min, int max);
 
-    public int readInt(String prompt, boolean nextLine) throws UserIOException;
+    long readLong(String prompt);
 
-    public int readInt(String prompt, int min, int max, boolean nextLine) throws UserIOException;
+    long readLong(String prompt, long min, long max);
 
-    public long readLong(String prompt, boolean nextLine);
-
-    public long readLong(String prompt, long min, long max, boolean nextLine);
-
-    public String readString(String prompt, boolean nextLine);
-
-    public String readString(String prompt, String options, boolean nextLine);
+    String readString(String prompt);
+    
+    
 }
